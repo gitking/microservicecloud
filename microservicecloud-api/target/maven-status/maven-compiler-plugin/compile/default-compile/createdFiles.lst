@@ -1,0 +1,7 @@
+META-INF\maven\com.atguigu.springcloud\microservicecloud-api\pom.properties
+META-INF\MANIFEST.MF
+com\atguigu\springcloud\entities\Dept.class
+META-INF\maven\com.atguigu.springcloud\microservicecloud-api\pom.xml
+com\atguigu\springcloud\service\DeptClientServiceFallbackFactory.class
+com\atguigu\springcloud\service\DeptClientService.class
+com\atguigu\springcloud\service\DeptClientServiceFallbackFactory$1.class
