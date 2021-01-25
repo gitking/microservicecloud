@@ -31,7 +31,7 @@ public class DeptController {
 	 * 并且我们这个工程的服务都是microservicecloud-api这个工程提供的,
 	 * 所以可以把@HystrixCommand移动到microservicecloud-api这个工程里面去
 	 */
-	//@HystrixCommand(fallbackMethod = "processHystrix_Get")
+	@HystrixCommand(fallbackMethod = "processHystrix_Get")
 	public Dept get(@PathVariable("id") Long id) {
 		Dept dept = service.get(id);
 		if (dept == null) {
@@ -39,10 +39,10 @@ public class DeptController {
 		}
 		return dept;
 	}
-//	public Dept proccessHystrix_Get(@PathVariable("id")Long id){
-//		return new Dept().setDeptno(id).setDname("该ID:" + id + "没有对应的信息,null--@HystrixCommand")
-//				.setDb_source("no this database in MySQL");
-//	}
+	public Dept processHystrix_Get(@PathVariable("id")Long id){
+		return new Dept().setDeptno(id).setDname("该ID:" + id + "没有对应的信息,null--@HystrixCommand")
+				.setDb_source("no this database in MySQL");
+	}
 	
 	@RequestMapping(value="/dept/add", method=RequestMethod.POST)
 	public boolean add(@RequestBody Dept dept) {

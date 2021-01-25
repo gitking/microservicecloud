@@ -17,6 +17,7 @@ public class DeptProvider8001_Hystrix_App {
 		 * 注意测试的时候只启动microservicecloud-provider-dept-hystrix-8001和microservicecloud-consumer-dept-80这个项目, microservicecloud-provider-dept-8001
 		 * microservicecloud-provider-dept-8002
 		 * microservicecloud-provider-dept-8003这是项目不用启动。
+		 * 启动成功之后再浏览器上测试访问:http://localhost:8001/dept/get/1
 		 */
 		SpringApplication.run(DeptProvider8001_Hystrix_App.class, args);
 	}
